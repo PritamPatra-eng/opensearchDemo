@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: opensearchdemo
+  datasource:
+    url: jdbc:oracle:thin:@//192.168.0.4:1521/freepdb1
+    username: pritam
+    password: pritam
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+        format_sql: true
+        default_schema: PRITAM
+            
+server:
+  port: 8080
+
+opensearch:
+  host: localhost
+  port: 9200
+  scheme: http
+  user: admin
+  password: admin
